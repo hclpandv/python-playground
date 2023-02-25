@@ -1,10 +1,14 @@
-name: Python testing
-
+name: PythonOutput
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: 
+    - main
+env:
+  VIKI_VAR: ${{ vars.VIKI_VAR }}
+  AZURE_CLIENT_ID: ${{ secrets.CLIENT_ID }}
+  AZURE_CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+  AZURE_SUBSCRIPTION_ID: ${{ secrets.SUBSCRIPTION_ID }}
+  AZURE_TENANT_ID: ${{ secrets.TENANT_ID }}
 
 jobs:
   build:
