@@ -6,7 +6,7 @@
 #--------------------------------------------------------------------------------------------------
 import os
 import json
-import requests
+#import requests
 import re
 
 def get_creds_from_env():
