@@ -21,6 +21,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8 #install the python needed
+      - name: execute main script 
+        run: |
+          python main.py      
       - name: execute py script 
         run: |
           python test.py
