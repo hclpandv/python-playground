@@ -23,4 +23,5 @@ jobs:
         env:
           key: ${{ secrets.key }} # if test.py requires passwords..etc, set it as secrets
       - name: some other step
+        run: echo hello
         
