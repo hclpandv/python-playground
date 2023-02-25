@@ -19,7 +19,7 @@ def get_creds_from_env():
     exclude_rg_filters = os.getenv("EXCLUDE_RG_FILTERS", "").split(",")
     viki_var = os.getenv("VIKI_VAR")
     
-    output = "Dear {}, subscription:{} has id:{}".format(viki_var,subscription_name,subscription_id) 
+    output = "Dear {}, subscription:{} has id:{}".format(viki_var,subscription_name,client_id) 
 
     return output
 
