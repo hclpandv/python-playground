@@ -31,3 +31,4 @@ if __name__ == '__main__':
     print(my_instance.greet())
     print(my_instance.farewell())
     print(my_instance.name)  # Using the property
+    print()

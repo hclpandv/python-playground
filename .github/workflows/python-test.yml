@@ -26,7 +26,7 @@ jobs:
           python main.py      
       - name: execute py script 
         run: |
-          python test.py
+          python viki_azure_module.py
         env:
           key: ${{ secrets.key }} # if test.py requires passwords..etc, set it as secrets
       - name: some other step
