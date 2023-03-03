@@ -78,5 +78,6 @@ if __name__ == '__main__':
         tenant_id = os.environ.get('TENANT_ID', None),
         subscription_id = os.environ.get('SUBSCRIPTION_ID', None)
     )
-        
+
+    #Testing    
     print(my_instance.get_azure_rgs())
