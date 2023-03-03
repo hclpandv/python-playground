@@ -6,7 +6,7 @@ Date        : 24-FEB-2023
 """
 import json
 import os
-import re
+#import re
 import requests
 
 class VikiAzureRM:
@@ -60,6 +60,16 @@ class VikiAzureRM:
             rgs.extend(result['value'])
         return json.dumps(rgs, indent=4)
 
+    def get_azure_vms(self,resource_group_name=None):
+        """
+        Function to retrive all VMs in a subscription or resource group
+        """
+        if(resource_group_name):
+            output = "Getting all VMs from resource group: {}".format(resource_group_name)
+        else:
+            output = "Getting all VMs from subscription: {}".format(self.subscription_id)
+        return output
+    
     @property
     def name(self):
         """
@@ -80,4 +90,5 @@ if __name__ == '__main__':
     )
 
     #Testing    
-    print(my_instance.get_azure_rgs())
+    #print(my_instance.get_azure_rgs())
+    print(my_instance.get_azure_vms())
